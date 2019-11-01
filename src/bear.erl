@@ -25,7 +25,9 @@
 
 -module(bear).
 
-%-compile([export_all]).
+-ifdef(TEST).
+-compile([export_all, nowarn_export_all]).
+-endif.
 
 -export([
          get_statistics/1,
